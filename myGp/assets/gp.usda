@@ -1,0 +1,24 @@
+#usda 1.0
+(
+   startFrame = 0
+   endFrame = 100
+)
+
+def Scope "world"
+{
+   
+    def GenerativeProcedural "myproc" (
+        prepend apiSchemas = ["HydraGenerativeProceduralAPI"]
+    )
+    {
+        token primvars:hdGp:proceduralType = "MyProceduralMesh"
+        float primvars:size.timeSamples = {
+            1: 1,
+            20: 20
+        }
+        float primvars:param.timeSamples = {
+            1: 0.0,
+            100: 10.0
+        }
+    }
+}

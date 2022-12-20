@@ -1,0 +1,25 @@
+{
+  "Plugins": [
+    {
+      "Info": {
+        "Types": {
+          "MyProceduralMeshPlugin": {
+            "bases": [ "HdGpGenerativeProceduralPlugin" ],
+            "displayName": "MyProceduralMesh",
+            "priority": 0
+          },
+          "MyProceduralFurPlugin": {
+            "bases": [ "HdGpGenerativeProceduralPlugin" ],
+            "displayName": "MyProceduralFur",
+            "priority": 0
+          }
+        }
+      },
+      "LibraryPath": "../mygp.dll",
+      "Name": "myGp",
+      "ResourcePath": "resources",
+      "Root": "..",
+      "Type": "library"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+#usda 1.0
+(
+   startFrame = 0
+   endFrame = 60
+   subLayers = [@torus.usd@]
+)
+
+def Scope "World"
+{
+    def GenerativeProcedural "myproc" (
+        prepend apiSchemas = ["HydraGenerativeProceduralAPI"]
+    )
+    {
+        token primvars:hdGp:proceduralType = "MyProceduralFur"
+        rel primvars:sourceMeshPath = </pTorus1>
+        float primvars:length = 0.2;
+        float primvars:numSamplesPerFace = 20;
+        #float primvars:numSamplesPerFace.timeSamples = {
+        #    1: 1,
+        #    60: 30
+        # }
+    }
+}
